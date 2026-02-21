@@ -6,7 +6,8 @@ from collections import defaultdict
 from flask import Flask
 import os
 
-TOKEN = os.environ.get('8558970838:AAESTBxZnt64rUzg4x-WLNjhPWa_mt3BrXo')  
+TOKEN = os.environ.get('8558970838:AAESTBxZnt64rUzg4x-WLNjhPWa_mt3BrXo') 
+print(f"DEBUG: TOKEN='{TOKEN}'")  # Shows what Render sees
 if not TOKEN:
     print("BOT_TOKEN missing!")
     exit(1)
