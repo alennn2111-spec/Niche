@@ -7,7 +7,11 @@ from flask import Flask
 import os
 
 TOKEN = os.environ.get('8558970838:AAESTBxZnt64rUzg4x-WLNjhPWa_mt3BrXo')  
+if not TOKEN:
+    Print("BOT_TOKEN missing!")
+    exit(1)
 bot = telebot.TeleBot(TOKEN)
+print(f"Bot started")
 
 # Storage for waiting users and pairs (user_id -> partner_id)
 waiting_users = set()
