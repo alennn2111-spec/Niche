@@ -1,13 +1,12 @@
-import os
 import telebot
 import random
 import threading
 import time
 from collections import defaultdict
 from flask import Flask
+import os
 
-TOKEN = os.environ.get('8558970838:AAESTBxZnt64rUzg4x-WLNjhPWa_mt3BrXo')  # ← NEW LINE
- # Replace with your token
+TOKEN = os.environ.get('8558970838:AAESTBxZnt64rUzg4x-WLNjhPWa_mt3BrXo')  
 bot = telebot.TeleBot(TOKEN)
 
 # Storage for waiting users and pairs (user_id -> partner_id)
