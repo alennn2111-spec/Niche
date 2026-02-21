@@ -5,7 +5,8 @@ import time
 from collections import defaultdict
 from flask import Flask
 
-TOKEN = '8558970838:AAESTBxZnt64rUzg4x-WLNjhPWa_mt3BrXo'  # Replace with your token
+TOKEN = os.environ.get('8558970838:AAESTBxZnt64rUzg4x-WLNjhPWa_mt3BrXo')  # ← NEW LINE
+ # Replace with your token
 bot = telebot.TeleBot(TOKEN)
 
 # Storage for waiting users and pairs (user_id -> partner_id)
