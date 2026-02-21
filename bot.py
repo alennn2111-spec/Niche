@@ -6,11 +6,12 @@ from collections import defaultdict
 from flask import Flask
 import os
 
-TOKEN = os.environ.get('8558970838:AAESTBxZnt64rUzg4x-WLNjhPWa_mt3BrXo') 
-print(f"DEBUG: TOKEN='{TOKEN}'")  # Shows what Render sees
-if not TOKEN:
-    print("BOT_TOKEN missing!")
-    exit(1)
+# TEMPORARY - REPLACE YOUR FULL TOKEN HERE (remove later)
+TOKEN = "8558970838:AAESTBxZnt64rUzg4x-WLNjhPWa_mt3BrXo"  # 7123456789:ABCdef...
+
+bot = telebot.TeleBot(TOKEN)
+print(f"✅ Bot started with token!")  # No more env check
+
 bot = telebot.TeleBot(TOKEN)
 print(f"Bot started")
 
